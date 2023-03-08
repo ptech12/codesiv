@@ -29,14 +29,15 @@ function Dashboard() {
     if (loading) <ScaleLoader />;
     if (!user) return navigate("/");
     fetchUserName();
+
   }, [user, loading]);
 
   const startSiv = () => {
-    navigate("/codesiv/code")
+    navigate("/code")
   }
 
   const hanldeLogout = () => {
-    redirect("/codesiv/login")
+    redirect("/login")
     logout()
 
   }
@@ -66,12 +67,12 @@ function Dashboard() {
         pauseOnHover
       />
       <div className="dashboard">
-      {showSuccessToast(`Welcome ${name}`)}
         <div className="dashboard__container">
           Logged in as
       
           <div>{name} </div>
           <div>{user?.email}</div>
+          {name ? showSuccessToast(`Welcome ${name}`) : null}
           <button className="dashboard__btn" onClick={startSiv}>
             Start CodeSiv
           </button>

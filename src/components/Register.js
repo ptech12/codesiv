@@ -22,7 +22,7 @@ const navigate = useNavigate();
   };
   useEffect(() => {
     if (loading) return;
-    if (user) navigate("/codesiv/dashboard");
+    if (user) navigate("/dashboard");
   }, [user, loading]);
   return (
     <div className="register">

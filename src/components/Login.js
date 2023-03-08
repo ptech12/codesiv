@@ -16,7 +16,7 @@ function Login() {
             // maybe trigger a loading screen
             return;
         }
-        if (user) navigate("/codesiv/dashboard");
+        if (user) navigate("/dashboard");
     }, [user, loading]);
 
 
@@ -38,7 +38,7 @@ function Login() {
     }
 
     return (
-        <div className="login">
+        <>
 
             <ToastContainer
                 position="top-right"
@@ -51,43 +51,46 @@ function Login() {
                 draggable
                 pauseOnHover
             />
-            <div className="login__container">
-                <h1 className="title"> CodeSiv </h1>
-                <p className="mean"> Login to the future of coding</p>
-                <br />
-                <input
-                    type="text"
-                    className="login__textBox"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="E-mail Address"
-                />
-                <input
-                    type="password"
-                    className="login__textBox"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
-                />
-                <button
-                    className="login__btn"
-                    onClick={() => handleLogin(email, password)}
-                >
+            <div className="login">
 
-                    Login
-                </button>
+                <div className="login__container">
+                    <h1 className="title"> CodeSiv </h1>
+                    <p className="mean"> Login to the future of coding</p>
+                    <br />
+                    <input
+                        type="text"
+                        className="login__textBox"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="E-mail Address"
+                    />
+                    <input
+                        type="password"
+                        className="login__textBox"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Password"
+                    />
+                    <button
+                        className="login__btn"
+                        onClick={() => handleLogin(email, password)}
+                    >
 
-                <button className="login__btn login__google" onClick={signInWithGoogle}>
-                    Login with Google
-                </button>
-                <div>
-                    <Link to="/codesiv/reset">Forgot Password</Link>
-                </div>
-                <div>
-                    Don't have an account? <Link to="/codesiv/register">Register</Link> now.
+                        Login
+                    </button>
+
+                    <button className="login__btn login__google" onClick={signInWithGoogle}>
+                        Login with Google
+                    </button>
+                    <div>
+                        <Link to="/reset">Forgot Password</Link>
+                    </div>
+                    <div>
+                        Don't have an account? <Link to="/register">Register</Link> now.
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 export default Login;

@@ -18,12 +18,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route  path="/" element={<Login />} />
-        <Route exact path="/codesiv" element={<Login />} />
-        <Route exact path="/codesiv/register" element={<Register />} />
-        <Route exact path="/codesiv/reset" element={<Reset />} />
-        <Route exact path="/codesiv/dashboard" element={<Dashboard />} />
-        <Route exact path="/codesiv/code" element={<Landing />} />
+        <Route  exact path="/" element={<Login />} />
+        {/* <Route exact path="/codesiv" element={<Login />} /> */}
+        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/reset" element={<Reset />} />
+        <Route exact path="/dashboard" element={<Dashboard />} />
+        <Route exact path="/code" element={<Landing />} />
         <Route path="*" element={<Navigate to={"/codesiv"} replace />} />
       </Routes>
     </Router>
