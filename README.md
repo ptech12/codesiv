@@ -4,6 +4,8 @@
 <!-- <img src="https://github.com/ptech12/codesiv/blob/master/login-demo.png" />
 <img src="https://github.com/ptech12/codesiv/blob/master/demo.png" /> -->
 
+[]!(https://github.com/ptech12/codesiv/blob/master/demo-gif.gif)
+
 <br />
 
 ⚡️ <a href="https://master--comforting-semolina-e1fa22.netlify.app/" target="__blank">Live Demo</a>
@@ -17,7 +19,7 @@
 ## Installations and setup
 
 ```
-$ git clone `https://github.com/ptech12/codesiv.git`
+$ git clone https://github.com/ptech12/codesiv.git
 ```
 
 ```
