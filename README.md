@@ -4,7 +4,7 @@
 <!-- <img src="https://github.com/ptech12/codesiv/blob/master/login-demo.png" />
 <img src="https://github.com/ptech12/codesiv/blob/master/demo.png" /> -->
 
-[demo-gif.gif]!(https://github.com/ptech12/codesiv/blob/master/demo-gif.gif)
+![](https://github.com/ptech12/codesiv/blob/master/demo-gif.gif)
 
 <br />
 
