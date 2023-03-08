@@ -1,8 +1,8 @@
 # CodeSiv - Compile and Execute code in 40+ languages
 
 ⚡️ A code editor that compiles and runs your code on the web.
-<img src="https://github.com/ptech12/codesiv/blob/main/login-demo.png" />
-<img src="https://github.com/ptech12/codesiv/blob/main/demo.png" />
+<img src="https://github.com/ptech12/codesiv/blob/master/login-demo.png" />
+<img src="https://github.com/ptech12/codesiv/blob/master/demo.png" />
 <br />
 
 ⚡️ <a href="https://main--prismatic-moonbeam-a5f9b1.netlify.app/" target="__blank">Live Demo</a>
