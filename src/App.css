@@ -130,3 +130,39 @@
 .dashboard div {
   margin-top: 7px;
 }
+
+/* CHAT AREA STYLING */
+.text-area {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+}
+/* Modal styles */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content styles */
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  width: 400px;
+}
+

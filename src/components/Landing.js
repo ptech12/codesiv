@@ -19,35 +19,30 @@ import LanguagesDropdown from "./LanguagesDropdown";
 import { RingLoader, ScaleLoader } from "react-spinners";
 import { useNavigate } from 'react-router-dom';
 import { logout } from "../firebase";
+import ChatInterface from "./ChatInterface";
 // import { logout } from "../firebase";
-const javascriptDefault = `/**
-* Problem: Binary Search: Search a sorted array for a target value.
-*/
+const javascriptDefault = `
+# Problem: EV Palindromes in a String
 
-// Time: O(log n)
-const binarySearch = (arr, target) => {
- return binarySearchHelper(arr, target, 0, arr.length - 1);
-};
+culate_palindrome_score(string):
+    score = 0
+    for i in range(len(string)):
+        for j in range(i + 4, len(string)):
+            substr = string[i:j+1]
+            if substr == substr[::-1]:
+                if len(substr) == 4:
+                    score += 5
+                elif len(substr) == 5:
+                    score += 10
+    return score
 
-const binarySearchHelper = (arr, target, start, end) => {
- if (start > end) {
-   return false;
- }
- let mid = Math.floor((start + end) / 2);
- if (arr[mid] === target) {
-   return mid;
- }
- if (arr[mid] < target) {
-   return binarySearchHelper(arr, target, mid + 1, end);
- }
- if (arr[mid] > target) {
-   return binarySearchHelper(arr, target, start, mid - 1);
- }
-};
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const target = 5;
-console.log(binarySearch(arr, target));
+
+# "madam", "racecar", "abCba" and "aBcc8a", and "ABBA
+
+temp = palindrome_score("madam")
+
+print(temp)
 `;
 
 const Landing = () => {
@@ -56,7 +51,7 @@ const Landing = () => {
   const [outputDetails, setOutputDetails] = useState(null);
   const [processing, setProcessing] = useState(null);
   const [theme, setTheme] = useState("cobalt");
-  const [language, setLanguage] = useState(languageOptions[0]);
+  const [language, setLanguage] = useState(languageOptions[languageOptions.length - 6]);
 
   const enterPress = useKeyPress("Enter");
   const ctrlPress = useKeyPress("Control");
@@ -249,8 +244,7 @@ const Landing = () => {
           ></path>
         </svg>
       </a> */}
-
-      <div className="h-4 w-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"></div>
+      {/* <ChatInterface /> */}
       <div className="flex flex-row">
         <div className="px-4 py-2">
           <LanguagesDropdown onSelectChange={onSelectChange} />
@@ -328,10 +322,22 @@ const Landing = () => {
             >
               Dashboard
             </button>
+            <button
+              // onClick={() => }
+              // disabled={!code}
+              className={classnames(
+                "mt-4 border-2 border-black z-10 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] px-4 py-2 hover:shadow transition duration-200 bg-white flex-shrink-0",
+                !code ? "opacity-50" : ""
+              )}
+            >
+              <ChatInterface />
+            </button>
           </div>
           {outputDetails && <OutputDetails outputDetails={outputDetails} />}
         </div>
       </div>
+      <div className="h-4 w-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"></div>
+
       <Footer />
     </>
   );
