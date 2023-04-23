@@ -36,6 +36,10 @@ function Dashboard() {
     navigate("/code")
   }
 
+  const startReact = () => {
+    navigate("/react-code")
+  }
+
   const hanldeLogout = () => {
     redirect("/login")
     logout()
@@ -75,6 +79,9 @@ function Dashboard() {
           {name ? showSuccessToast(`Welcome ${name}`) : null}
           <button className="dashboard__btn" onClick={startSiv}>
             Start CodeSiv
+          </button>
+          <button className="dashboard__btn" onClick={startReact}>
+            Start CodeSiv React
           </button>
           <button className="dashboard__btn" onClick={hanldeLogout}>
             Logout

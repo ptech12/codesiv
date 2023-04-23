@@ -12,6 +12,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Reset from "./components/Reset";
 import Dashboard from "./components/Dashboard";
+import CodeSandbox from "./components/CodeSandbox";
 
 function App() {
   // return <Landing />;
@@ -24,6 +25,8 @@ function App() {
         <Route exact path="/reset" element={<Reset />} />
         <Route exact path="/dashboard" element={<Dashboard />} />
         <Route exact path="/code" element={<Landing />} />
+        <Route exact path="/react-code" element={<CodeSandbox />} />
+
         <Route path="*" element={<Navigate to={"/codesiv"} replace />} />
       </Routes>
     </Router>

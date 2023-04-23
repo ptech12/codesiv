@@ -32,24 +32,19 @@ function ChatInterface() {
     // .then(response => response.json())
     // .then(data => console.log(data))
     // .catch(error => console.error(error));
-    axios.post('https://api.openai.com/v1/engine/davinci-codex/completions', {
-      prompt: text,
-      max_tokens: 50,
-      temperature: 0.5,
-      n: 1,
-      stop: '\n'
-    }, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.CHAT_GPT_API_KEY}`
-      }
-    })
+
+      axios.get('http:localhost:3001/api/chatgpt', {
+        prompt: 'Hello, ChatGPT!',
+        max_tokens: 50,
+
+      })
       .then(response => {
         console.log(response.data);
       })
       .catch(error => {
         console.error(error);
       });
+      
 
 
     // clear the text area

@@ -51,7 +51,7 @@ const Landing = () => {
   const [outputDetails, setOutputDetails] = useState(null);
   const [processing, setProcessing] = useState(null);
   const [theme, setTheme] = useState("cobalt");
-  const [language, setLanguage] = useState(languageOptions[languageOptions.length - 6]);
+  const [language, setLanguage] = useState(languageOptions[languageOptions.length - 9]);
 
   const enterPress = useKeyPress("Enter");
   const ctrlPress = useKeyPress("Control");
@@ -119,7 +119,7 @@ const Landing = () => {
           console.log("too many requests", status);
 
           showErrorToast(
-            `Quota of 100 requests exceeded for the Day! Please read the blog on freeCodeCamp to learn how to setup your own RAPID API Judge0!`,
+            `Quota of 100 requests exceeded for the Day! Please subscribe for RAPID API Judge0!`,
             10000
           );
         }
